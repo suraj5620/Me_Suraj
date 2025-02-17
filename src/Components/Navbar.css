@@ -1,0 +1,197 @@
+/* General reset for margin, padding, and box-sizing */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #000;
+  padding: 1rem 2rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 10;
+  animation: slideDown 1s ease-out forwards;
+  transition: padding 0.3s ease, height 0.3s ease;
+}
+
+/* Container for navbar content */
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  /* align-items: center; */
+  height: 8vh;
+  /* margin: 0 auto; */
+  transition: max-width 0.3s ease;
+}
+
+/* Logo styling */
+.logo a {
+  color: #fff;
+  font-size: 2rem;
+  font-weight: bold;
+  text-decoration: none;
+  transition: color 0.3s ease, font-size 0.3s ease;
+}
+
+.logo a:hover {
+  color: #4A90E2;
+}
+
+/* Navigation links styling */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+}
+
+/* Position of nav links and animation */
+.nav-links {
+  position: fixed;
+  top: 0;
+  right: -250px;  /* Initially hide the menu offscreen */
+  width: 250px;   
+  height:30%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;  /* Align items to the left */
+  transition: right 0.3s ease-in-out;
+   /* Adjust for spacing from the top */
+}
+
+/* Show the menu when active */
+.nav-links.active {
+  right: 0;  /* Slide the menu into view */
+}
+
+.nav-links li {
+  padding: 1rem;
+}
+
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.2rem;
+  font-weight: 500;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #4A90E2;
+  transform: translateY(-5px);
+}
+
+/* Hamburger icon styles */
+.hamburger {
+  cursor: pointer;
+  z-index: 20;
+  display: block;
+}
+
+.hamburger div {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  margin: 5px 0;
+  transition: all 0.3s ease;
+}
+
+/* Hamburger icon transforms into a cross when the menu is active */
+.navbar-container.active .hamburger div:nth-child(1) {
+  transform: rotate(45deg);
+  position: relative;
+  top: 8px;
+}
+
+.navbar-container.active .hamburger div:nth-child(2) {
+  opacity: 0;
+}
+
+.navbar-container.active .hamburger div:nth-child(3) {
+  transform: rotate(-45deg);
+  position: relative;
+  top: -8px;
+}
+
+/* For smaller screens (like phones) */
+@media (max-width: 768px) {
+  .navbar {
+    padding: 0.5rem 1rem;
+  }
+
+  .logo a {
+    font-size: 1.5rem;
+  }
+
+  /* Hide nav links by default */
+  .nav-links {
+    right: -250px;  /* Initially hide the menu offscreen */
+  }
+
+  /* Show nav links when active class is added */
+  .nav-links.active {
+    right: 0;
+  }
+
+  .nav-links a {
+    font-size: 1rem;
+  }
+
+  .hamburger {
+    display: block;
+    z-index: 20;
+  }
+}
+
+/* Hide the hamburger menu button in desktop view */
+@media (min-width: 769px) {
+  .hamburger {
+    display: none;
+  }
+
+  /* Show nav links in full-width layout */
+  .nav-links {
+    position: static;
+    width: auto;
+    height: auto;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    display: flex;
+  }
+
+  .nav-links li {
+    padding: 0 1rem;
+  }
+}
+
+/* For smaller screens (like phones) */
+@media (max-width: 480px) {
+  .navbar {
+    padding: 0.5rem 1rem;
+  }
+  .navbar-container{
+    height:3vh;
+  }
+  .hamburger div{
+    margin-top: 5px;
+    padding-left: -10px;
+  }
+
+  .nav-links a {
+    font-size: 0.8rem;
+  }
+  .nav-links{
+    height:30%;
+    gap:0;
+    width:100px;
+   
+  }
+
+  .logo a {
+    font-size: 1rem;
+  }
+}
