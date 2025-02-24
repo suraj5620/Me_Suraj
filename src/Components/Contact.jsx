@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import  { useState } from 'react';
 import { FaInstagram, FaFacebookF, FaLinkedinIn, FaGithub } from 'react-icons/fa';
 import './Contact.css';
 
@@ -6,23 +6,19 @@ const Contact = () => {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
-    message: ''
+    message: '',
   });
-
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
-
   const handleSubmit = (e) => {
     e.preventDefault();
     alert('Form submitted!');
   };
-
   return (
     <div className="contact-section" id="contact">
       <div className="flex">
       <h2 className="contact-heading">Contact Me</h2>
-
 <div className="social-links">
   <a href="https://www.instagram.com/surajsharma_192" target="_blank" rel="noopener noreferrer" className="social-icon">
     <FaInstagram />
@@ -38,7 +34,6 @@ const Contact = () => {
   </a>
 </div>
       </div>
-
       <form className="contact-form" onSubmit={handleSubmit}>
         <div className="form-group">
           <input
@@ -85,8 +80,6 @@ const Contact = () => {
         </div>
         <button type="submit" className="submit-btn">Send Message</button>
       </form>
-
-
       <div className="footer">
         <p>If you have any questions, feel free to reach out to me through the form above or via social media.</p>
         <p>© 2025 Suraj</p>

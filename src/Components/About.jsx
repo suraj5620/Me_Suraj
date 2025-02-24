@@ -1,5 +1,5 @@
 import "./About.css";
-import profilePic from "../assets/Images/suraj.jpg"; // Replace with your image path
+import profilePic from "../assets/Images/suraj.jpg";
 
 const About = () => {
   return (

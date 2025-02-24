@@ -47,7 +47,6 @@
     animation: fadeInRight 1.5s ease-out forwards;
     opacity: 0; 
 }
-
 .about-heading {
     font-size: 2.5rem;
     font-weight: 700;
@@ -58,7 +57,6 @@
     animation: fadeInDown 1s ease-out forwards;
     text-align: left;
 }
-
 .about-description {
     font-size: 1.125rem;
     line-height: 1.6;
@@ -67,7 +65,6 @@
     animation: fadeInUp 1.2s ease-out forwards;
     color: #fff;
 }
-
 .about-skills h3 {
     font-size: 1.5rem;
     font-weight: 600;
@@ -76,7 +73,6 @@
     color: #fff;
     text-align: left;
 }
-
 .about-skills ul {
     list-style-type: none;
     padding: 0;
@@ -86,14 +82,12 @@
     opacity: 0; 
     animation: fadeInSkills 2s ease-out forwards; 
 }
-
 .about-skills ul li {
     font-size: 1.125rem;
     margin-bottom: 8px;
     animation: fadeInUp 1.5s ease-out forwards;
     animation-delay: 0.5s;
     text-align: left;
-    /* background-color:rgba(0, 0, 0, 0.1); */
     background-color:black;
     color:white;
     padding: 8px 15px;
@@ -101,18 +95,15 @@
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, background-color 0.3s ease;
 }
-
 .about-skills ul li:hover {
     transform: translateY(-5px);
     background-color: #ff7e5f;
     color: white;
     cursor: pointer;
 }
-
 .about-right .about-skills {
     margin-top: 30px;
 }
-
 @keyframes fadeInSection {
     from {
         opacity: 0;
@@ -121,7 +112,6 @@
         opacity: 1;
     }
 }
-
 @keyframes fadeInContainer {
     from {
         opacity: 0;
@@ -132,7 +122,6 @@
         transform: translateY(0);
     }
 }
-
 @keyframes fadeInLeft {
     from {
         opacity: 0;
@@ -143,7 +132,6 @@
         transform: translateX(0);
     }
 }
-
 @keyframes fadeInRight {
     from {
         opacity: 0;
@@ -154,7 +142,6 @@
         transform: translateX(0);
     }
 }
-
 @keyframes fadeInDown {
     from {
         opacity: 0;
@@ -165,7 +152,6 @@
         transform: translateY(0);
     }
 }
-
 @keyframes fadeInUp {
     from {
         opacity: 0;
@@ -176,7 +162,6 @@
         transform: translateY(0);
     }
 }
-
 @keyframes zoomIn {
     from {
         transform: scale(0.8);
@@ -187,7 +172,6 @@
         opacity: 1;
     }
 }
-
 @keyframes fadeInSkills {
     from {
         opacity: 0;
@@ -198,9 +182,6 @@
         transform: translateY(0);
     }
 }
-
-
-/* Button Fade-In Animation */
 @keyframes fadeInButton {
     from {
         opacity: 0;
@@ -216,23 +197,18 @@
         flex-direction: column;
         text-align: center;
     }
-
     .about-left {
         margin-bottom: 30px;
     }
-
     .about-right {
         padding-left: 0;
     }
-
     .about-heading {
         font-size: 2rem;
     }
-
     .about-description {
         font-size: 1rem;
     }
-
     .about-skills ul li {
         font-size: 1rem;
     }

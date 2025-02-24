@@ -7,7 +7,6 @@
   opacity: 0;
   animation: fadeInSection 1.5s ease-in-out forwards;
 }
-
 @keyframes fadeInSection {
   0% {
     opacity: 0;
@@ -26,9 +25,8 @@
   -webkit-background-clip: text;
   color: #fff;
   opacity: 0;
-  animation: fadeInText 1s ease-in-out 0.5s forwards; /* Fade-in animation for heading */
+  animation: fadeInText 1s ease-in-out 0.5s forwards;
 }
-
 @keyframes fadeInText {
   0% {
     opacity: 0;
@@ -37,8 +35,6 @@
     opacity: 1;
   }
 }
-
-/* Skills Container Grid */
 .skills-container {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
@@ -46,8 +42,6 @@
   justify-items: center;
   margin-top: 40px;
 }
-
-/* Skill Card */
 .skill-card {
   background-image: linear-gradient(to left top, #bbb5d1, #99c0ee, #49d0f9, #00dee2, #00e5aa, #79d96a, #b5c72e, #eaad00, #ff7d2e, #ff475c, #f6178d, #bc2ebc);
   border-radius: 12px;
@@ -65,9 +59,8 @@
   cursor: pointer;
   position: relative;
   opacity: 0;
-  animation: fadeInCard 0.5s ease-in-out forwards; /* Fade-in for skill card */
+  animation: fadeInCard 0.5s ease-in-out forwards; 
 }
-
 @keyframes fadeInCard {
   0% {
     opacity: 0;
@@ -78,7 +71,6 @@
     transform: translateY(0);
   }
 }
-
 .skill-card::before {
   content: '';
   position: absolute;
@@ -89,18 +81,15 @@
   background-color: rgba(255, 255, 255, 0.1);
   border-radius: 10px;
   z-index: -1;
-  transition: background-color 0.4s ease;
+  transition:background-color 0.4s ease;
 }
-
 .skill-card:hover {
   transform: translateY(-12px) rotate(5deg); 
   box-shadow: 0 12px 40px rgba(0, 0, 0, 0.2);
 }
-
 .skill-card:hover::before {
   background-color: rgba(255, 255, 255, 0.2);
 }
-
 .skill-icon {
   width: 70px;
   height: 70px;
@@ -108,12 +97,9 @@
   object-fit: contain;
   transition: transform 0.3s ease, rotate 0.3s ease;
 }
-
 .skill-card:hover .skill-icon {
-  transform: scale(1.1) rotate(360deg); /* Rotate on hover */
+  transform: scale(1.1) rotate(360deg); 
 }
-
-/* Skill Card Text */
 .skill-card h3 {
   font-size: 1.4rem;
   color: #000;
@@ -123,23 +109,18 @@
   margin-top: 10px;
   transition: color 0.3s ease;
 }
-
 .skill-card:hover h3 {
-  color: #f5a623; /* Color change on hover */
+  color: #f5a623; 
 }
-
-/* Responsive Styles */
 @media (max-width: 768px) {
   .skills-container {
     grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
   }
-
   .skill-card {
     padding: 20px;
     width: 160px;
     height: 200px;
   }
-
   .skill-icon {
     width: 50px;
     height: 50px;

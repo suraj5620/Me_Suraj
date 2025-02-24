@@ -37,18 +37,18 @@ const HeroSection = () => {
         <p className="hero-description">    
           I specialize in building interactive websites and applications. Let's create something amazing together!
         </p>
-        <Link 
-          to="contact"
-          smooth={true} 
-          duration={1000} 
-          className="cta-button"
-        >
-          Contact Me
-        </Link>
+            <Link 
+            to="contact"
+             smooth={true} 
+             duration={1000} 
+            className="cta-button"
+          >
+        Contact Me
+          </Link>
             <div className="social-links-1">
-              <a  data-aos="fade-up" href="https://www.instagram.com/surajsharma_192" target="_blank" rel="noopener noreferrer" className="social-icon-1">
+               <a  data-aos="fade-up" href="https://www.instagram.com/surajsharma_192" target="_blank" rel="noopener noreferrer" className="social-icon-1">
                 <FaInstagram />
-              </a>
+               </a>
               <a data-aos="fade-up" href="https://www.facebook.com/share/18jvmWwTiC/" target="_blank" rel="noopener noreferrer" className="social-icon-1">
                 <FaFacebookF />
               </a>
@@ -62,7 +62,6 @@ const HeroSection = () => {
       </div>
     </div>
     </>
-
   );
 };
 
