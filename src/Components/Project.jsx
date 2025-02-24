@@ -18,7 +18,7 @@ const Project = () => {
       image: image2,
       title: "Password Generator",
       description:
-      "A simple tool that generates secure, random passwords with customizable option.",
+      "A simple tool that generates secure, random passwords with customizable.",
       link: "https://github.com/suraj5620/PasswordGenerator",
     },
     {
@@ -38,7 +38,7 @@ const Project = () => {
         <p>Here are some of the projects I have worked on:</p>
       </div>
 
-      <div className="project">
+      <div className="project" data-aos="zoom-in">
         {projects.map((project) => (
           <div
             className="project-card"

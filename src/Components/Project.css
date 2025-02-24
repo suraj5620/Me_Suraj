@@ -1,4 +1,3 @@
-/* General styling for the project section */
 .project-section {
     padding: 80px 20px;
     background-color: #f4f4f4;
@@ -13,7 +12,7 @@
 body{
     overflow-x: hidden;
 }
-/* Fade-in animation for the section */
+
 @keyframes fadeInSection {
     0% {
         opacity: 0;
@@ -24,13 +23,6 @@ body{
         transform: translateY(0);
     }
 }
-
-/* Scroll behavior */
-body {
-    scroll-behavior: smooth;
-}
-
-/* Title of the project section */
 .project-section h2 {
     font-size: 36px;
     color: #fff;
@@ -39,16 +31,12 @@ body {
     letter-spacing: 2px;
     animation: fadeInText 1.5s ease-out;
 }
-
-/* Subtitle of the section */
 .section-title p {
     font-size: 30px;
     margin-bottom: 20px;
     color: #fff;
     animation: fadeInText 1.8s ease-out;
 }
-
-/* Fade-in animation for the text */
 @keyframes fadeInText {
     0% {
         opacity: 0;
@@ -72,10 +60,7 @@ body {
     justify-content: center;
     gap: 10px;
 }
-
-/* Each individual project card styling */
-.project-card {
-    
+.project-card { 
     width: 300px;
     background-color: #fff;
     border-radius: 15px;
@@ -83,8 +68,6 @@ body {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     animation: fadeInCard 1.5s forwards; 
 }
-
-/* Card fade-in animation */
 @keyframes fadeInCard {
     0% {
         opacity: 0;
@@ -95,14 +78,10 @@ body {
         transform: translateY(0);
     }
 }
-
-/* Hover effect on project cards */
 .project-card:hover {
     transform: scale(1.05);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Stronger shadow on hover */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); 
 }
-
-/* Image inside project card */
 .project-card img {
     width: 100%;
     height: 200px;
@@ -110,10 +89,6 @@ body {
     transition: transform 0.3s ease;
     border-radius: 8px;
 }
-
-
-
-/* Title of each project */
 .project-card h3 {
     font-size: 24px;
     color: #333;
@@ -122,8 +97,6 @@ body {
     letter-spacing: 1px;
     animation: fadeInText 1.8s ease-out;
 }
-
-/* Description or additional info for each project */
 .project-card p {
     font-size: 16px;
     color: #555;
@@ -131,8 +104,6 @@ body {
     margin-bottom: 20px;
     animation: fadeInText 2s ease-out;
 }
-
-/* Button or link to view more details */
 .project-card a {
     text-decoration: none;
     color: #fff;
@@ -144,26 +115,61 @@ body {
     transition: background-color 0.3s ease;
     display: inline-block;
     text-align: center;
-    
 }
-
+body{
+    overflow-x:hidden;
+}
 .project-card a:hover {
     background-color: fuchsia;
 }
-
-/* Background image zoom effect */
-@keyframes zoomBackground {
-    0% {
-        transform: scale(1);
-    }
-    100% {
-        transform: scale(1.1);
-    }
-}
-
 .project-section {
-    animation: zoomBackground 15s infinite alternate; /* Infinite zoom on background */
+    animation: zoomBackground 15s infinite alternate; 
 }
+@media(max-width:768px){
+    
+    body {
+        scroll-behavior: smooth;
+    }
+}
+@media(max-width:568px){
 
+}
+@media(max-width:468px){
+    .project-section {
+        padding: 60px 20px;
+        background-color: #f4f4f4;
+        text-align: center;
+        background: linear-gradient(to bottom, rgba(235, 233, 249, 1) 0%, rgba(216, 208, 239, 1) 50%, rgba(206, 199, 236, 1) 51%, rgba(193, 191, 234, 1) 100%);
+        background-image: url("../assets/Images/bgimage4.jpg");
+        background-position: center;
+        background-size: cover;
+        animation: fadeInSection 1s ease-out;
+        position: relative;
+    }
+    .project-section h2 {
+        font-size: 25px;
+    }
+    .section-title p{
+        font-size: 20px;
+    }  
+    .project-card{
+        width:260px;
+        height:400px;
+    }
+    .project {
+        display: flex;
+        justify-content: center;
+        gap: 5rem;
+        flex-wrap: wrap;
+        animation: fadeInText 2s ease-out;
+        margin-bottom: 40px;
+    }
+    .project-cards {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+    }
+}
 
 

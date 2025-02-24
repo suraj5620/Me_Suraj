@@ -1,11 +1,11 @@
 import { useState } from 'react';
-import './Navbar.css';  // CSS file for styling
+import './Navbar.css';
 
 const Navbar = () => {
-  // State to toggle the active class on the navbar for mobile view
+  
   const [isMenuActive, setIsMenuActive] = useState(false);
 
-  // Function to toggle the mobile menu
+  
   const toggleMenu = () => {
     setIsMenuActive(!isMenuActive);
   };
@@ -16,13 +16,13 @@ const Navbar = () => {
         <div className="logo">
           <a href="/"><b>Suraj Sharma</b></a>
         </div>
-        {/* Hamburger icon for mobile view */}
+    
         <div className="hamburger" onClick={toggleMenu}>
           <div></div>
           <div></div>
           <div></div>
         </div>
-        {/* Mobile navigation links */}
+        
         <ul className={`nav-links ${isMenuActive ? 'active' : ''}`}>
           <li className='list'><a href="#home">Home</a></li>
           <li className='list'><a href="#about">About</a></li>

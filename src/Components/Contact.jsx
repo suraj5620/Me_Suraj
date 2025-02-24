@@ -15,7 +15,6 @@ const Contact = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // You can handle form submission here, e.g., sending data to a server.
     alert('Form submitted!');
   };
 
@@ -87,7 +86,7 @@ const Contact = () => {
         <button type="submit" className="submit-btn">Send Message</button>
       </form>
 
-      {/* Footer Section */}
+
       <div className="footer">
         <p>If you have any questions, feel free to reach out to me through the form above or via social media.</p>
         <p>© 2025 Suraj</p>

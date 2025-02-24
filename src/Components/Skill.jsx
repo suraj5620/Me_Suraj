@@ -25,7 +25,12 @@ const Skill = () => {
   return (
     <section className="skills-section" id="skills">
       <h2>My Skills</h2>
-      <div className="skills-container">
+      <div className="skills-container"
+      data-aos="fade-zoom-in"
+      data-aos-easing="ease-in-back"
+      data-aos-delay="300"
+      data-aos-offset="0"
+      >
         {skills.map((skill, index) => (
           <div className="skill-card" key={index}>
             <img src={skill.image} alt={skill.name} className="skill-icon" />

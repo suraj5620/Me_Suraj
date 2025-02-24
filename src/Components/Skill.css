@@ -5,7 +5,7 @@
   text-align: center;
   background-image: url("../assets//Images/bgimage5.avif");
   opacity: 0;
-  animation: fadeInSection 1.5s ease-in-out forwards; /* Fade-in effect for section */
+  animation: fadeInSection 1.5s ease-in-out forwards;
 }
 
 @keyframes fadeInSection {
@@ -16,8 +16,6 @@
     opacity: 1;
   }
 }
-
-/* Skills Heading */
 .skills-section h2 {
   font-size: 3rem;
   font-weight: bold;
@@ -95,7 +93,7 @@
 }
 
 .skill-card:hover {
-  transform: translateY(-12px) rotate(5deg); /* Add slight rotation effect */
+  transform: translateY(-12px) rotate(5deg); 
   box-shadow: 0 12px 40px rgba(0, 0, 0, 0.2);
 }
 
@@ -103,7 +101,6 @@
   background-color: rgba(255, 255, 255, 0.2);
 }
 
-/* Skill Icon */
 .skill-icon {
   width: 70px;
   height: 70px;
