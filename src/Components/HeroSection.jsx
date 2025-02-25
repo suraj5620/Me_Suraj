@@ -25,6 +25,10 @@ const HeroSection = () => {
     <> 
       <div className="hero-container" id="home">
       <div className="hero-left">
+
+      <div className="wave wave1"></div>
+      <div className="wave wave2"></div>
+      <div className="wave wave3"></div>
       <img src={suraj} alt="Suraj Sharma" className="hero-image" />
       <marquee  behavior="scroll"  direction="left"  scrollamount="5"
       > 

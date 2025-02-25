@@ -13,7 +13,7 @@ const About = () => {
     >
           <h2 className="about-heading">About Me</h2>
           <p className="about-description">
-          Hello! I'm Suraj Sharma, a passionate Frontend Developer with hands-on experience in building interactive, responsive, and user-friendly websites. Currently, I am an intern at ASV Consulting Services Pvt. Ltd., where I am honing my skills in frontend development by working on real-world projects and collaborating with a dynamic team of developers.
+          Hello! I'm <mark>Suraj Sharma</mark>, a passionate Frontend Developer with hands-on experience in building interactive, responsive, and user-friendly websites. Currently, I am an  <mark>intern at ASV Consulting Services Pvt. Ltd.</mark>, where I am honing my skills in frontend development by working on real-world projects and collaborating with a dynamic team of developers.
           </p>
           <div className="about-skills">
             <h3>Technologies I Use</h3>

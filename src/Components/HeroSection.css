@@ -5,35 +5,86 @@
   height: 100vh;
   padding: 0 80px;
   box-sizing: border-box;
-  background:#f1f1f1;
-  background-image: url("../assets/Images/bgimage2.avif");
-  background-position:center;
-  background-size:cover;
-  animation: moveBackground 8s linear infinite;
+  background:hsl(0, 0%, 95%);
+  background-image: url("../assets/Images/DarkImage.webp");
+  background-position:center bottom;
+  background-size:cover; 
+  background-repeat: no-repeat;
+  position: relative;
+  animation: moveBackground 20s linear infinite;
 }
+
+@keyframes moveBackground {
+  0% {
+    background-position: center bottom;
+  }
+  50%{
+    background-position: center top;
+  }
+  100% {
+    background-position: center bottom;
+  }
+}
+.wave {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 100px;
+  background: rgba(255, 255, 255, 0.1);
+  filter: blur(10px);
+  opacity: 0.7;
+  animation: waveAnimation 6s infinite linear;
+}
+
+.wave1 {
+  animation-duration: 6s;
+  animation-delay: 0s;
+}
+
+.wave2 {
+  animation-duration: 8s;
+  animation-delay: -3s;
+  opacity: 0.5;
+}
+
+.wave3 {
+  animation-duration: 10s;
+  animation-delay: -6s;
+  opacity: 0.3;
+}
+@keyframes waveAnimation {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
 .hero-left {
   flex: 1;
   animation: moveImageUpDown 4s ease-in-out infinite;
 }
 .hero-image {
-  width: 350px;
-  height: 350px;
-  border-radius: 50%;
+  width:350px;
+  height:350px;
+  border-radius:50%;
   object-fit: cover;
-  transition: transform 7s ease-in-out;
+  transition:transform 7s ease-in-out;
 }
 .hero-right {
   flex: 1;
-  font-size: 2rem;
-  text-align: left;
-  color: #333;
-  animation: fadeInRight 1.5s ease-in-out;
+  font-size:2rem;
+  text-align:left;
+  color: #fff;
+  animation:fadeInRight 1.5s ease-in-out;
 }
 .hero-heading {
   font-size: 3.3rem;
   font-weight: bold;
   margin-bottom: 20px;
-  color: #333;
+  color: #fff;
+  z-index: 99;
   animation: fadeInText 1s ease-in-out;
 }
 .social-links-1{
@@ -51,30 +102,70 @@
 .running-text {
   font-size: 2.4rem;
   font-weight: 600;
-  color: #310808;
+  color: #fff;
   animation: fadeInText 2s ease-in-out infinite;
 }
 .hero-description {
   margin-top: 20px;
   font-size: 2rem;
-  color: #777;
+  color: #fff;
   margin-bottom: 30px;
   animation: fadeInText 2.5s ease-in-out;
 }
 .cta-button {
-  padding: 10px 20px;
-  background-color: #000;
-  color: white;
+  padding: 12px 24px;
   font-size: 1.2rem;
+  color: white;
+  background: fuchsia;
   border: none;
-  border-radius: 5px;
+  border-radius: 8px;
   cursor: pointer;
-  transition: background-color 0.3s ease;
-  background-size: 200% auto;
-  overflow: hidden;
   position: relative;
-  background-image: linear-gradient(90deg,#000,#333,#555,#333,#000);
-  animation: movebackground 2s linear infinite;
+  overflow: hidden;
+  z-index: 1;
+  transition: background 0.3s ease;
+}
+.cta-button::before {
+  content: "";
+  position: absolute;
+  top: -4px;
+  left: -4px;
+  right: -4px;
+  bottom: -4px;
+  background: linear-gradient(45deg, #ff00ff, #ff6600, #00ffff, #ff00ff, #ff6600, #00ffff);
+  background-size: 400% 400%;
+  border-radius: 12px;
+  z-index: -1;
+  filter: blur(12px); 
+  animation: glowing 4s ease infinite;
+}
+.cta-button::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 8px;
+  padding: 2px; 
+  background: linear-gradient(45deg, #ff00ff, #ff6600, #00ffff, #ff00ff);
+  background-size: 300% 300%;
+  animation: borderGlow 3s linear infinite;
+  -webkit-mask: linear-gradient(white, white) content-box, linear-gradient(white, white);
+  mask: linear-gradient(white, white) content-box, linear-gradient(white, white);
+  -webkit-mask-composite: exclude;
+  mask-composite: exclude;
+}
+@keyframes glowing {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+@keyframes borderGlow {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+.cta-button:hover {
+  background: rgba(0, 0, 0, 0.9);
+  border-color: #ff00ff;
 }
 marquee{ 
   font-size: 24px; 
@@ -108,17 +199,6 @@ marquee{
   100% {
     opacity: 1;
     transform: translateX(0);
-  }
-}
-@keyframes moveBackground {
-  0% {
-    background-position: 0 0;
-  }
-  50% {
-    background-position: 50% 50%;
-  }
-  100% {
-    background-position: 0 0;
   }
 }
 @keyframes moveImageUpDown {
@@ -171,56 +251,108 @@ marquee{
     }
   }
   .cta-button:hover {
-    background-color: #ff0077;
+    background-color: #fff;
   }
+  
 }
-@media screen and (max-width: 400px) {
+@media (max-width:420px) {
   .hero-container {
     flex-direction: column;
-    padding: 20px;
-    height: auto;
+    padding:15px;
+    height:auto;
     background-position: center;
     text-align: center;
+    overflow: hidden; /* Prevent overflow issue */
   }
+
   .hero-left, .hero-right {
     flex: none;
     text-align: center;
     width: 100%;
   }
+
   .hero-image {
-    width: 150px;
-    height: 150px;
+    width: 130px;  
+    height: 130px;
     margin: 10px auto;
     display: block;
     border-radius: 50%;
   }
+
   .hero-heading {
-    font-size: 1.5rem;
-    margin-bottom: 10px;
+    font-size: 1.3rem;
+    margin-bottom: 8px;
   }
+
   .running-text {
-    font-size: 1rem;
-    margin-bottom: 10px;
+    font-size: 0.9rem;
+    margin-bottom: 8px;
   }
 
   .hero-description {
-    font-size: 0.9rem;
-    color: #555;
+    font-size: 0.85rem;
+    color: #ddd;
+    margin-bottom: 15px;
   }
+
   .cta-button {
-    font-size: 0.8rem;
-    padding: 8px 12px;
-    margin-top: 10px;
+    font-size: 0.85rem;
+    padding: 6px 12px;
+    margin-top: 8px;
   }
+
   .social-links-1 {
     display: flex;
     justify-content: center;
-    gap: 0.8rem;
-    font-size: 1.2rem;
-    margin-top: 15px;
+    gap: 0.6rem;
+    font-size: 1rem;
+    margin-top: 12px;
   }
+
   marquee { 
-    font-size: 14px; 
+    font-size: 12px; 
     margin-top: 5px;
   }
+  .nav-container {
+    width: 100%;
+    background: black;
+    padding: 10px 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+  }
+  .nav-links {
+    flex-direction: column;
+    text-align: center;
+    padding: 10px 0;
+    display: none;
+  }
+  .nav-links.active {
+    display: flex; 
+  }
+
+  .nav-links li {
+    display: block;
+    padding: 8px 0;
+  }
+  .hamburger {
+    display: block;
+    cursor: pointer;
+    position: absolute;
+    right: 20px;
+    top: 15px;
+  }
+  .hamburger div {
+    width: 30px;
+    height: 4px;
+    background: white;
+    margin: 5px 0;
+  }
+
+  .hero-left {
+    animation: none; 
+  }
+ 
 }
+
